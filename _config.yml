@@ -1,0 +1,8 @@
+title: Marine AI Lab
+description: Minimal, text-first lab website powered by GitHub Pages (Jekyll)
+markdown: kramdown
+# If you publish in a repo that's NOT username.github.io, set baseurl to /your-repo-name
+# baseurl: ""
+
+# Optional: if you use a custom domain, add a CNAME file at the repo root and configure DNS
+# url: "https://lab.example.com"
