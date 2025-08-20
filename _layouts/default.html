@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }} · {{ site.title }}</title>
+    <meta name="description" content="{{ site.description }}">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="{{ site.baseurl }}/">
+          <img src="{{ site.baseurl }}/assets/images/lab-logo.png" alt="Lab Logo" onerror="this.style.display='none'">
+          <div>
+            <div class="site-title">{{ site.title }}</div>
+            <div class="site-desc">{{ site.description }}</div>
+          </div>
+        </a>
+        <nav class="nav">
+          <a href="{{ site.baseurl }}/">主页</a>
+          <a href="{{ site.baseurl }}/people.html">成员</a>
+          <a href="{{ site.baseurl }}/publications.html">论文</a>
+          <a href="{{ site.baseurl }}/news.html">新闻</a>
+          <a href="{{ site.baseurl }}/contact.html">联系</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        {{ content }}
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        © {{ "now" | date: "%Y" }} {{ site.title }} · Powered by GitHub Pages
+      </div>
+    </footer>
+  </body>
+</html>
