@@ -1,32 +1,153 @@
-/* Minimal lab site styles */
-:root{
+/* 课题组官网配色：蓝色导航 + 白底 + 学术感 */
+:root {
   --maxw: 920px;
-  --fg: #1f2937;
-  --muted: #6b7280;
-  --link: #2563eb;
-  --bg: #ffffff;
-  --card: #f9fafb;
-  --border: #e5e7eb;
+  --fg: #1a1a1a;       /* 主文字颜色 */
+  --muted: #6b7280;    /* 辅助灰色文字 */
+  --link: #0056b3;     /* 链接蓝色 */
+  --bg: #ffffff;       /* 页面背景白色 */
+  --card: #f9fafb;     /* 内容卡片浅灰 */
+  --border: #e5e7eb;   /* 边框灰 */
+  --nav-bg: #003366;   /* 导航深蓝 */
+  --nav-text: #ffffff; /* 导航文字白 */
 }
-*{box-sizing:border-box;}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";}
-a{color:var(--link);text-decoration:none;}
-a:hover{text-decoration:underline;}
-.container{max-width:var(--maxw);margin:0 auto;padding:24px;}
-.site-header{border-bottom:1px solid var(--border);background:#fff;position:sticky;top:0;z-index:10;}
-.brand{display:flex;gap:12px;align-items:center;}
-.brand img{width:36px;height:36px;border-radius:8px;object-fit:cover;}
-.nav{display:flex;gap:16px;flex-wrap:wrap;margin-left:auto;}
-.header-inner{display:flex;align-items:center;gap:16px;max-width:var(--maxw);margin:0 auto;padding:12px 24px;}
-.site-title{font-weight:700;}
-.site-desc{color:var(--muted);font-size:14px;}
-main{padding:16px 0;}
-.hero{background:var(--card);border:1px solid var(--border);padding:16px;border-radius:14px;}
-footer{border-top:1px solid var(--border);color:var(--muted);}
-code, pre{background:#f3f4f6;border:1px solid var(--border);border-radius:8px;padding:2px 6px;}
-pre{padding:12px;overflow:auto;}
-table{border-collapse:collapse;width:100%;}
-th, td{border:1px solid var(--border);padding:8px;text-align:left;}
-blockquote{border-left:4px solid var(--border);margin:0;padding:8px 12px;background:var(--card);border-radius:8px;}
-img{max-width:100%;height:auto;border-radius:10px;}
-ul{padding-left:20px;}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.65 "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* 容器 */
+.container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* 顶部导航栏 */
+.site-header {
+  background: var(--nav-bg);
+  color: var(--nav-text);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 12px 24px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.brand img {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.site-title {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--nav-text);
+}
+.site-desc {
+  color: #cbd5e1; /* 浅灰蓝 */
+  font-size: 14px;
+}
+.nav {
+  display: flex;
+  gap: 20px;
+}
+.nav a {
+  color: var(--nav-text);
+  font-weight: 500;
+}
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* 主体内容 */
+main {
+  padding: 20px 0;
+}
+.hero {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+
+/* 页脚 */
+footer {
+  border-top: 1px solid var(--border);
+  background: #f1f5f9;
+  color: var(--muted);
+  font-size: 14px;
+  padding: 16px 0;
+}
+footer .container {
+  text-align: center;
+}
+
+/* 图片与排版 */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+ul {
+  padding-left: 20px;
+}
+blockquote {
+  border-left: 4px solid var(--border);
+  margin: 0;
+  padding: 8px 12px;
+  background: var(--card);
+  border-radius: 6px;
+}
+
+/* 表格 */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 16px 0;
+}
+th, td {
+  border: 1px solid var(--border);
+  padding: 8px;
+  text-align: left;
+}
+
+/* 代码块 */
+code, pre {
+  background: #f3f4f6;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: Consolas, monospace;
+}
+pre {
+  padding: 12px;
+  overflow-x: auto;
+}
